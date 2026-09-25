@@ -1,6 +1,8 @@
 ﻿using DatabaseTask.Core.Domain;
 using Microsoft.EntityFrameworkCore;
 
+namespace DatabaseTask.Data;
+
 public class DatabaseTaskDbContext : DbContext
 {
     public DatabaseTaskDbContext(DbContextOptions<DatabaseTaskDbContext> options)
@@ -18,4 +20,15 @@ public class DatabaseTaskDbContext : DbContext
     public DbSet<Intranet> Intranets { get; set; }
     public DbSet<Rank> Ranks { get; set; }
     public DbSet<HealthCare> HealthCares { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<Borrow>()
+            .HasOne(b => b.ItemOwnedByCompany)
+            .WithMany(i => i.Borrows)
+            .HasForeignKey(b => b.ItemOwnedByCompanyId)
+            .OnDelete(DeleteBehavior.Restrict);
+    }
 }

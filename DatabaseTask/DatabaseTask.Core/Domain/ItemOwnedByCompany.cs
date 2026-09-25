@@ -10,6 +10,6 @@ namespace DatabaseTask.Core.Domain
         public Guid CompanyId { get; set; }
         public Company Company { get; set; }
 
-        public ICollection Borrows { get; set; }
+        public ICollection<Borrow> Borrows { get; set; } = new List<Borrow>();
     }
 }

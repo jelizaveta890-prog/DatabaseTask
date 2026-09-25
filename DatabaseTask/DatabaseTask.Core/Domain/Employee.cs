@@ -15,10 +15,11 @@ namespace DatabaseTask.Core.Domain
         public Guid CompanyId { get; set; }
         public Company Company { get; set; }
 
-        public ICollection Children { get; set; }
-        public ICollection Borrows { get; set; }
-        public ICollection Customers { get; set; }
-        public ICollection Ranks { get; set; }
-        public ICollection HealthCares { get; set; }
+        public ICollection<Child> Children { get; set; } = new List<Child>();
+        public ICollection<Borrow> Borrows { get; set; } = new List<Borrow>();
+        public ICollection<Customer> Customers { get; set; } = new List<Customer>();
+        public ICollection<Rank> Ranks { get; set; } = new List<Rank>();
+        public ICollection<HealthCare> HealthCares { get; set; } = new List<HealthCare>();
+        public ICollection<Employee> Employees { get; set; } = new List<Employee>();
     }
 }

@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using DatabaseTask.Core.Domain;
 
-namespace DatabaseTask.Core.Domain
+public class Company
 {
-    public class Company
-    {
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Location { get; set; }
+    public Guid Id { get; set; }
+    public string Name { get; set; }
+    public string Location { get; set; }
 
-        public ICollection Employees { get; set; }
-        public ICollection Intranets { get; set; }
-        public ICollection ItemsOwnedByCompany { get; set; }
-    }
+    public ICollection<Employee> Employees { get; set; } = new List<Employee>();
+    public ICollection<Intranet> Intranets { get; set; } = new List<Intranet>();
+    public ICollection<ItemOwnedByCompany> ItemsOwnedByCompany { get; set; } = new List<ItemOwnedByCompany>();
 }
