@@ -15,7 +15,7 @@ namespace DatabaseTask.Core.Domain
         public string Description { get; set; }
         public int RoomAmmount { get; set; }
 
-        public ICollection<Payroll> Payrolls { get; set; }
-            = new List<Payroll>();
+        public ICollection<Room> Rooms { get; set; }
+            = new List<Room>();
     }
 }

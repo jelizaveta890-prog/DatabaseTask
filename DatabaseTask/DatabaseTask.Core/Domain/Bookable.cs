@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+
 namespace DatabaseTask.Core.Domain
 {
     public class Bookable

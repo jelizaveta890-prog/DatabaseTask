@@ -2,7 +2,7 @@
 
 namespace DatabaseTask.Core.Domain
 {
-    public  class Payroll
+    public class Payroll
     {
         [Key]
         public Guid Id { get; set; }
@@ -11,6 +11,5 @@ namespace DatabaseTask.Core.Domain
 
         //nav property
         public Employee Employee { get; set; }
-
     }
 }

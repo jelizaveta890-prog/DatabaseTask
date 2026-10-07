@@ -17,8 +17,7 @@ namespace DatabaseTask.Core.Domain
         public DateTime EndDate { get; set; }
         public string PersonalId { get; set; }
 
-        public ICollection<Payroll> Payrolls { get; set; }
-                  = new List<Payroll>();
-
+        public ICollection<Payroll> ServiceOrders { get; set; }
+            = new List<Payroll>();
     }
 }

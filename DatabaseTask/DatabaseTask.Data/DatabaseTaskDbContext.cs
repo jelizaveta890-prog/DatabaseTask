@@ -17,6 +17,6 @@ namespace DatabaseTask.Data
         public DbSet<Payroll> Payrolls { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<ServiceOrder> ServiceOrders { get; set; }
-        public DbSet<Services> Services { get; set; }
+        public DbSet<Service> Services { get; set; }
     }
 }

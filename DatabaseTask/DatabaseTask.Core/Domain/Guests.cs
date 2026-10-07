@@ -15,6 +15,6 @@ namespace DatabaseTask.Core.Domain
         public string Citizenship { get; set; }
 
         public ICollection<Booking> ServiceOrders { get; set; }
-         = new List<Booking>();
+             = new List<Booking>();
     }
 }

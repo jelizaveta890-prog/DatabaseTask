@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
+using System.ComponentModel.DataAnnotations;
 
 namespace DatabaseTask.Core.Domain
 {
@@ -12,7 +13,6 @@ namespace DatabaseTask.Core.Domain
 
         //nav property
         public ICollection<ServiceOrder> ServiceOrders { get; set; }
-         = new List<ServiceOrder>();
-
+            = new List<ServiceOrder>();
     }
 }

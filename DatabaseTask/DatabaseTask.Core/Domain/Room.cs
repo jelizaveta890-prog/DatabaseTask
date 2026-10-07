@@ -12,7 +12,7 @@ namespace DatabaseTask.Core.Domain
         public float Price { get; set; }
         public int RoomNr { get; set; }
         public int Floor { get; set; }
-        public bool AirCon  { get; set; }
+        public bool AirCon { get; set; }
 
         public Guid HotelId { get; set; }
         //nav property
@@ -20,7 +20,5 @@ namespace DatabaseTask.Core.Domain
 
         public ICollection<Booking> Bookings { get; set; }
             = new List<Booking>();
-
-
     }
 }

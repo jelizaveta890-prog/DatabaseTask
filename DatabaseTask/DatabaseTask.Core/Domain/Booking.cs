@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+
 namespace DatabaseTask.Core.Domain
 {
     public class Booking
@@ -17,11 +18,12 @@ namespace DatabaseTask.Core.Domain
         public Guid RoomId { get; set; }
         //navigation property
         public Room Room { get; set; }
-        public Guests Guests { get; set; }
-        public ICollection<Payment> payments { get; set; }
-                 = new List<Payment>();
 
+        public Guests Guest { get; set; }
+
+        public ICollection<Payment> Payments { get; set; }
+            = new List<Payment>();
         public ICollection<ServiceOrder> ServiceOrders { get; set; }
-                 = new List<ServiceOrder>();
+            = new List<ServiceOrder>();
     }
 }

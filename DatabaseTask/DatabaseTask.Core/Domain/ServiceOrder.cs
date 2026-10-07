@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+
 namespace DatabaseTask.Core.Domain
 {
     public class ServiceOrder
@@ -9,10 +10,7 @@ namespace DatabaseTask.Core.Domain
         public DateTime OrderDate { get; set; }
 
         //nav property
-        public  Service Service { get; set; }
-        public  Booking Booking { get; set; }
-
-
-
+        public Service Service { get; set; }
+        public Booking Booking { get; set; }
     }
 }
