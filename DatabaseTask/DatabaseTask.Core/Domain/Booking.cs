@@ -25,5 +25,7 @@ namespace DatabaseTask.Core.Domain
             = new List<Payment>();
         public ICollection<ServiceOrder> ServiceOrders { get; set; }
             = new List<ServiceOrder>();
+        public ICollection<Bookable> Bookables { get; set; }
+    = new List<Bookable>();
     }
 }

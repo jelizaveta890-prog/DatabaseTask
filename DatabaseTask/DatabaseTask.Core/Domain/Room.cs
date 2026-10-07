@@ -18,7 +18,7 @@ namespace DatabaseTask.Core.Domain
         //nav property
         public Hotel Hotel { get; set; }
 
-        public ICollection<Booking> Bookings { get; set; }
-            = new List<Booking>();
+        public ICollection<Bookable> Bookings { get; set; }
+            = new List<Bookable>();
     }
 }
